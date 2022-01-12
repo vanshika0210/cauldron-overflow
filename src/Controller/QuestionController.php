@@ -7,18 +7,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class QuestionController extends AbstractController
 {
-
     /**
-    * @Route("/","name=app_homepage")
+    * @Route("/",name="app_homepage")
     */
-    
+
     public function homepage()
     {
         return $this->render('question/homepage.html.twig');
     }
-
     /**
-    * @Route("/questions/{slug}")
+    * @Route("/questions/{slug}",name="app_question_show")
     */
 
     public function show($slug)
